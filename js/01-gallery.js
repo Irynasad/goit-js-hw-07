@@ -22,8 +22,8 @@ function onImgOriginal(event) {
 
   const urlImage = event.target.getAttribute("data-source");
   const descrImage = event.target.getAttribute("alt");
+
   viewOriginalSizeGalleryItem(urlImage, descrImage);
-  console.log(urlImage, descrImage);
 
   removeActiveClassOfGalleryItem();
 
