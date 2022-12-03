@@ -16,13 +16,14 @@ function onImgOriginal(event) {
   event.preventDefault();
   window.addEventListener("keydown", onCloseModalKeydown);
 
-  if (!event.target.classList.contains("gallery__link")) {
+  if (!event.target.classList.contains("gallery__image")) {
     return;
   }
-  console.log(urlImage, descrlImage);
+
   const urlImage = event.target.getAttribute("data-source");
-  const descrlImage = event.target.getAttribute("alt");
-  viewOriginalSizeGalleryItem(urlImage, descrlImage);
+  const descrImage = event.target.getAttribute("alt");
+  viewOriginalSizeGalleryItem(urlImage, descrImage);
+  console.log(urlImage, descrImage);
 
   removeActiveClassOfGalleryItem();
 
