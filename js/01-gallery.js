@@ -69,7 +69,8 @@ function viewOriginalSizeGalleryItem(url, description) {
 
 function onCloseModalKeydown(event) {
   if (event.code === "Escape") {
-    modal.close();
-    window.removeEventListener("keydown", onCloseModalKeydown);
+    modal.close(() => {
+      window.removeEventListener("keydown", onCloseModalKeydown);
+    });
   }
 }
